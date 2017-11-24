@@ -5,11 +5,12 @@ import java.util.Scanner;
 public class CalcSwitch {
     public static void main(String[] args) {
     	Scanner s = new Scanner(System.in);
-    	String[] arr = new String[4];
-    	arr[0] = "첫번째 숫자를 입력해주세요.";
-    	arr[1] = "연산자를 입력해주세요.";
-    	arr[2] = "두번째 숫자를 입력해주세요.";
-    	arr[3] = "사칙 연산자만 입력해주세요.";
+    	String[] arr = {
+    			"첫번째 숫자를 입력해주세요.",
+    			"연산자를 입력해주세요.",
+    			"두번째 숫자를 입력해주세요.",
+    			"사칙 연산자만 입력해주세요."
+    	};
     	int num1 = 0, num2 = 0, result = 0; 
     	String opcode = "", test = "";
     	boolean inputok = true;
