@@ -1,8 +1,44 @@
 package com.bit.opcode;
 
-
+import java.util.Scanner;
 
 public class Ssn {
+    public static void main(String[] args) {
+    	Scanner scan = new Scanner(System.in);
+    	String[] arr = {
+    			"이름을 입력해주세요",
+    			"주민등록 번호를 입력해주세요",
+    			"다시 입력하세요",
+    			" %s : %s : %s "
+    	};
+    	boolean input = true; 
+    	String name = "", ssn = "", gender = "",
+    			text = "";
+    	System.out.println(arr[0]);
+    	name = scan.next();
+    	System.out.println(arr[1]);
+    	ssn = scan.next();
+    	char ch = ssn.charAt(7);
+    	if(ch == '1' || ch == '3') {
+			gender = "남";
+		}else if(ch == '2' || ch == '4'){
+			gender = "여";	
+		}else if(ch == '5' || ch == '6'){
+			gender = "외국인";
+		}else { input = false; 
+		} 	
+    	
+    	if(input = true){
+    		text = String.format(arr[3], 
+    				name, ssn, gender);
+    	}else { text = arr[2] ; 
+    	}
+    	 System.out.println(text);
+    	
+    }
+}
+
+
 	/*
 	To.개발자님
 	       * 프로그램을 하나 개발해야 합니다.
@@ -24,6 +60,3 @@ public class Ssn {
 	       그러면 내부값은 '1' 이렇게 된다
 	       if(ch=='0'||ch=='7'||ch=='8'||ch=='9'){...}
 	 * */
-
-
-}
