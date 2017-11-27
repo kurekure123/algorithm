@@ -32,14 +32,12 @@ public class SsnSwitch {
     	case '6' :
     		gender = "외국인"; 
     		break;
-    	default : 
-    		input = false; 
-    		break;
     	}		
-    	if(input = true) {
+    	if(ch=='0'||ch=='7'||ch=='8'||ch=='9') {
+    		text = arr[2];
+    	}else {
     		text = String.format(arr[3], 
-    				name, ssn, gender);
-    	}else {text = arr[2];
+				name, ssn, gender);
     	}
     	System.out.printf(text);
     	
