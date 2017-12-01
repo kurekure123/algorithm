@@ -13,7 +13,7 @@ if(18.5 <= bmi && bmi < 22.9)
 import java.util.Scanner;
 
 public class Bmi {
-   public static void main(String[] args) {
+   public void main() {
 	   String res = "";
 	   Scanner s = new Scanner(System.in);
 	   int customer = 0;
@@ -26,11 +26,13 @@ public class Bmi {
 			   "경도 비만 입니다.",
 			   "중등도 비만 입니다.",
 			   "고도 비만 입니다.",
-			   " %s 님은 %s\n"
+			   " %s 님은 %s\n",
+			   " 몇 분이세요? "
 	   };
-	   System.out.println("몇 분이세요?");
+	   System.out.println(arr[9]);
 	   customer = s.nextInt();
-	   for(int i = 1; i <= customer; i++) {
+	   int i = 0;
+	   while(i < customer) {
 	   String name = "", text ="";
 	   double high = 0.0, weight = 0.0, bmi = 0.0;
 				System.out.println(arr[0]);
